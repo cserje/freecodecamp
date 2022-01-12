@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require ts-node/register --watch-extensions ts 'test/**/*.ts'"
+    "test": "mocha --require ts-node/register --watch-extensions ts 'test/**/*.ts'",
+    "test_palindrome": "mocha --require ts-node/register --watch-extensions ts 'test/palindrome_checker.ts'",
+    "test cash_register": "mocha --require ts-node/register --watch-extensions ts 'test/cash_register.ts'"
   },
   "keywords": [],
   "author": "",
