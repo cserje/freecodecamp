@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1 id="title">Selective waste collection</h1>
+        <p id="description">survey on selective waste collection practices</p>
+      </header>
+      <form id="survey-form">
+        <label id="name-label" for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Enter your name" required />
+        <label id="email-label" for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="Enter your Email" required />
+        <label id="number-label" for="number">Age (optional)</label>
+        <input id="number" type="number" min="5" max="99" placeholder="Age" />
+        <label for="dropdown">I collect these selectively</label>
+        <select id="dropdown" name="waste-collection" multiple>
+          <option>none</option>
+          <option>metal</option>
+          <option>plastic</option>
+        </select>
+        <fieldset>
+          <legend>Gender</legend>
+          <label> <input type="radio" name="gender" value="male" required />Male</label>
+          <label> <input type="radio" name="gender" value="female" />Female</label>
+          <label> <input type="radio" name="gender" value="other" />I'm not binary</label>
+        </fieldset>
+        <label> <input type="checkbox" name="accept-sub" value="true" />Subscribe to mailing list</label>
+        <label> <input type="checkbox" name="accept-eula" value="true" required />Accept EULA</label>
+        <label id="comment-label" for="comment">Any comments or suggestions?</label>
+        <textarea id="comment"></textarea>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
