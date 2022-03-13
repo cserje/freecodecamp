@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div id="container">
@@ -14,7 +20,7 @@
       </header>
       <form id="survey-form">
         <label id="name-label" for="name">Name</label>
-        <input id="name" type="text" name="name" placeholder="Enter your name" required />
+        <input id="name" class="form-control" type="text" name="name" placeholder="Enter your name" required />
         <label id="email-label" for="email">Email</label>
         <input id="email" type="email" name="email" placeholder="Enter your Email" required />
         <label id="number-label" for="number">Age (optional)</label>
@@ -25,18 +31,39 @@
           <option>metal</option>
           <option>plastic</option>
         </select>
-        <fieldset>
+        <fieldset class="form-group">
           <legend>Gender</legend>
-          <label> <input type="radio" name="gender" value="male" required />Male</label>
-          <label> <input type="radio" name="gender" value="female" />Female</label>
-          <label> <input type="radio" name="gender" value="other" />I'm not binary</label>
+          <div class="form-check"><label> <input type="radio" name="gender" value="male" required />Male</label></div>
+          <div class="form-check"><label> <input type="radio" name="gender" value="female" />Female</label></div>
+          <div class="form-check"><label> <input type="radio" name="gender" value="other" />I'm not binary</label></div>
         </fieldset>
-        <label> <input type="checkbox" name="accept-sub" value="true" />Subscribe to mailing list</label>
-        <label> <input type="checkbox" name="accept-eula" value="true" required />Accept EULA</label>
+        <div class="form-check">
+          <input id="subscription" type="checkbox" class="form-check-input" name="accept-sub" value="true" checked />
+          <label for="subscription" class="form-check-label">Subscribe to mailing list</label>
+        </div>
+        <div class="form-check">
+          <input id="eula" type="checkbox" class="form-check-input" name="accept-eula" value="true" required />
+          <label for="eula" class="form-check-label"> Accept EULA</label>
+        </div>
         <label id="comment-label" for="comment">Any comments or suggestions?</label>
         <textarea id="comment"></textarea>
         <button id="submit" type="submit">Submit</button>
       </form>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
